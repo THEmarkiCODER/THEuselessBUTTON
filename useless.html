@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Useless Button</title>
+  <style>
+    body {
+      background-color: #fdf6e3;
+      font-family: Comic Sans MS, cursive, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    button {
+      font-size: 24px;
+      padding: 20px 40px;
+      cursor: pointer;
+    }
+
+    #message {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>The Useless Button</h1>
+  <button onclick="doSomethingUseless()">Do Not Click</button>
+  <div id="message"></div>
+
+  <script>
+    const messages = [
+      "I told you not to click it!",
+      "Seriously, stop that.",
+      "What do you expect to happen?",
+      "Still clicking?",
+      "This is literally pointless.",
+      "Now I'm just disappointed.",
+      "You're just wasting your own time.",
+      "Do you feel more powerful now?",
+      "Fine. Click all you want.",
+      "I'm not even mad. Just... tired.",
+      "Click click click. Happy?",
+      "Okay now you're just trolling me."
+    ];
+
+    let count = 0;
+
+    function doSomethingUseless() {
+      const msg = messages[count % messages.length];
+      document.getElementById("message").textContent = msg;
+      count++;
+    }
+  </script>
+
+</body>
+</html>
